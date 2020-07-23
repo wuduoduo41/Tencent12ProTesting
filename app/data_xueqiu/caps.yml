@@ -1,0 +1,14 @@
+caps:
+  platformName: 'android'
+  platformVersion: '6.0'
+  deviceName: '127.0.0.1:7555'
+  appPackage: 'com.xueqiu.android'
+  appActivity: '.common.MainActivity'
+  noReset: 'true'
+  unicodeKeyBoard: 'true'
+  resetKeyBoard: 'true'
+  skipDeviceInitialization: 'true'
+  skipServerInstallation: 'true'
+  automationName: 'uiautomator2'
+
+

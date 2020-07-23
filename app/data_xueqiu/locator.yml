@@ -1,0 +1,35 @@
+goto_market:
+  - by: xpath
+    locator: '//*[@resource-id="com.xueqiu.android:id/tab_name" and @text="行情"]'
+    action: click
+
+goto_search:
+  - by: xpath
+    locator: '//*[@resource-id="com.xueqiu.android:id/action_search"]'
+    action: click
+
+search:
+  - by: 'xpath'
+    locator: '//*[@resource-id="com.xueqiu.android:id/search_input_text"]'
+    action: 'send_keys'
+    value: '${name}'
+
+  - by: 'xpath'
+    locator: '//*[@resource-id="com.xueqiu.android:id/listview"]//*[@text="${name}"]'
+    action: 'click'
+
+add_target:
+  - by: 'xpath'
+    locator: '//*[@resource-id="com.xueqiu.android:id/ll_stock_item_container"]//*[@text="${name}"]/../..//*[@text="加自选"]'
+    action: 'click'
+
+is_choose:
+  - by: 'xpath'
+    locator: '//*[@resource-id="com.xueqiu.android:id/ll_stock_item_container"]//*[@text="${name}"]/../..//*[@text="已添加"]'
+    action: 'len>0'
+
+reset:
+  - by: 'xpath'
+    locator: '//*[@resource-id="com.xueqiu.android:id/ll_stock_item_container"]//*[@text="${name}"]/../..//*[@text="已添加"]'
+    action: 'click'
+
