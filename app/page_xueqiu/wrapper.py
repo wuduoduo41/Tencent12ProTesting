@@ -24,7 +24,7 @@ def handle_black(func):
 
         instance: BasePage = args[0]
         try:
-            logging.info('run' + func.__name__ + '\n args:\n' + repr(args) + '\n kwargs:\n' + repr(kwargs))
+            logging.info('run: ' + func.__name__ + '\n args:\n' + repr(args[1:]) + '\n kwargs:\n' + repr(kwargs))
             element = func(*args, **kwargs)
             _error_num = 0
             instance.implicitly_wait(5)
